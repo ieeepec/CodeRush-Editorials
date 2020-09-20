@@ -1,0 +1,26 @@
+Sam has a list of stock’s values of different days (The value varies every day). Sam must buy a stock on one day but must resell it on another day, but he must do so at a loss. 
+Output the loss if he buys a stock on one day and resells in any of the following days such that the loss is minimized. 
+For example,  the values on 3 days (d=3) are [5,10,3]. So, to minimize the loss, he must buy a stock on the first day at value[0]=5 and sell it on the third day at value[2]=3. The loss will be (5-3)=2.
+
+Input Format :
+The first line contains an integer d, the number of days.
+The second line contains d space-separated long integers describing each value[i].
+
+Constraints :
+•	2<=d<=2*(10^5)
+•	1<=value[i]<10^16
+•	All the values are distinct.
+•	A valid answer exists.
+
+Output Format :
+Print a single integer denoting the value Sam loses if he buys and resell the stock within the d days.
+
+Sample Input :
+5
+20 7 8 2 5
+
+Sample Output :
+2
+
+Explanation :
+Sam buys the stock on 2nd day at value[1]=7 and sells it on 5th day at value[4]=5  incurring a loss of  (7-5)=2.

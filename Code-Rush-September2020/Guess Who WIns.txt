@@ -1,0 +1,47 @@
+                                                                    Guess Who Wins
+
+Lauren and Susan are playing a game. Lauren takes the first chance. The rules of the game are as follows:
+
+1.) The game is played on a row of n boxes, indexed from 0  to n-1. Each box i (0<=i< n) contains bi balls.   
+
+2.) Lauren and Susan takes alternate turns. During each turn, the current player must remove exactly 1 ball from the ith box and move it to the jth box (if and only if 0<=j< i) .
+
+3.) The game ends when all the balls are in box 0 and none of them can take a turn. The first player who is left without any move looses the game.                                                  
+
+Assuming both of them play optimally, determine who wins, Lauren (the first person to make a move) or Susan (the second person to make move).     
+    
+Input Format: 
+
+The first line contains an integer, T , denoting the number of test cases. 
+Each of the 2T subsequent lines defines a test case. Each test case is described over the following two lines:
+
+1.) An integer,n , denoting the number of boxes.
+2.) n space-separated integers, b0,b1,b2, ....,bn-1 , where each bi describes the number of balls in ith box.          
+
+Constraints: 
+1.) 1<=T<=10^4
+2.) 1<=n<=100
+3.) 0<=bi<=10^9
+
+Output Format:
+
+For each test case, print the name of the winner on a new line (i.e., either Lauren or Susan ).
+
+Sample Input:
+2
+5
+0 2 3 0 6
+4
+0 0 0 0
+
+Sample Output:
+Lauren
+Susan
+
+Explanation:
+
+1st Case:
+Lauren will put one ball from box 2 to box 0. Hence, Susan is left with the boxes [1,2,2,0,6]. Now whatever her move would be, Lauren can always nullify the change by putting a ball in the same box in which she put it. So Lauren wins as the last move is always played by her.
+
+2nd Case:
+All the boxes are empty so Lauren cannot make any move, hence Susan wins.
